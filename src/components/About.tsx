@@ -2,7 +2,7 @@ import Button from './ui/Button';
 
 const About = () => {
 	return (
-		<section className='w-full px-4 sm:px-6 lg:px-8'>
+		<section id='about' className='w-full px-4 sm:px-6 lg:px-8'>
 			<div className='container mx-auto'>
 				<div className='flex flex-col lg:flex-row w-full justify-center items-center gap-8 lg:gap-12 rounded-b-2xl lg:rounded-b-3xl bg-[#F3F4F6] py-12 lg:py-16 px-6 lg:px-12 text-white overflow-hidden relative lg:h-[80vh]'>
 					{/* Image Section */}

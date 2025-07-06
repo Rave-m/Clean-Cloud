@@ -33,6 +33,35 @@ const Header = () => {
 		}
 	};
 
+	const handleNavClick = (sectionId: string) => {
+		const element = document.getElementById(sectionId);
+		if (element) {
+			element.scrollIntoView({
+				behavior: 'smooth',
+				block: 'start',
+			});
+		}
+
+		// Close mobile menu if open
+		const mobileMenu = document.getElementById('mobile-menu');
+		if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+			toggleMobileMenu();
+		}
+	};
+
+	const scrollToTop = () => {
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth',
+		});
+
+		// Close mobile menu if open
+		const mobileMenu = document.getElementById('mobile-menu');
+		if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+			toggleMobileMenu();
+		}
+	};
+
 	return (
 		<header>
 			<div className='container mx-auto px-4 sm:px-6 lg:px-8'>
@@ -46,36 +75,36 @@ const Header = () => {
 
 						{/* Desktop Navigation */}
 						<nav className='hidden lg:flex items-center space-x-8'>
-							<a
-								href='#'
-								className='text-black hover:text-underline font-medium transition-colors duration-300 hover:underline decoration-black/60'
+							<button
+								onClick={scrollToTop}
+								className='text-black hover:text-underline font-medium transition-colors duration-300 hover:underline decoration-black/60 cursor-pointer'
 							>
 								Home
-							</a>
-							<a
-								href='#about'
-								className='text-black hover:text-underline font-medium transition-colors duration-300 hover:underline decoration-black/60'
+							</button>
+							<button
+								onClick={() => handleNavClick('about')}
+								className='text-black hover:text-underline font-medium transition-colors duration-300 hover:underline decoration-black/60 cursor-pointer'
 							>
 								About Us
-							</a>
-							<a
-								href='#services'
-								className='text-black hover:text-underline font-medium transition-colors duration-300 hover:underline decoration-black/60'
+							</button>
+							<button
+								onClick={() => handleNavClick('services')}
+								className='text-black hover:text-underline font-medium transition-colors duration-300 hover:underline decoration-black/60 cursor-pointer'
 							>
 								Services
-							</a>
-							<a
-								href='#reviews'
-								className='text-black hover:text-underline font-medium transition-colors duration-300 hover:underline decoration-black/60'
+							</button>
+							<button
+								onClick={() => handleNavClick('reviews')}
+								className='text-black hover:text-underline font-medium transition-colors duration-300 hover:underline decoration-black/60 cursor-pointer'
 							>
 								Reviews
-							</a>
-							<a
-								href='#contact'
-								className='text-black hover:text-underline font-medium transition-colors duration-300 hover:underline decoration-black/60'
+							</button>
+							<button
+								onClick={() => handleNavClick('contact')}
+								className='text-black hover:text-underline font-medium transition-colors duration-300 hover:underline decoration-black/60 cursor-pointer'
 							>
 								Contact
-							</a>
+							</button>
 						</nav>
 					</div>
 
@@ -107,36 +136,36 @@ const Header = () => {
 					id='mobile-menu'
 				>
 					<nav className='flex flex-col space-y-4'>
-						<a
-							href='#'
-							className='text-black hover:text-underline font-medium transition-colors duration-300 py-2'
+						<button
+							onClick={scrollToTop}
+							className='text-black hover:text-underline font-medium transition-colors duration-300 py-2 text-left cursor-pointer'
 						>
 							Home
-						</a>
-						<a
-							href='#about'
-							className='text-black hover:text-underline font-medium transition-colors duration-300 py-2'
+						</button>
+						<button
+							onClick={() => handleNavClick('about')}
+							className='text-black hover:text-underline font-medium transition-colors duration-300 py-2 text-left cursor-pointer'
 						>
 							About Us
-						</a>
-						<a
-							href='#services'
-							className='text-black hover:text-underline font-medium transition-colors duration-300 py-2'
+						</button>
+						<button
+							onClick={() => handleNavClick('services')}
+							className='text-black hover:text-underline font-medium transition-colors duration-300 py-2 text-left cursor-pointer'
 						>
 							Services
-						</a>
-						<a
-							href='#reviews'
-							className='text-black hover:text-underline font-medium transition-colors duration-300 py-2'
+						</button>
+						<button
+							onClick={() => handleNavClick('reviews')}
+							className='text-black hover:text-underline font-medium transition-colors duration-300 py-2 text-left cursor-pointer'
 						>
 							Reviews
-						</a>
-						<a
-							href='#contact'
-							className='text-black hover:text-underline font-medium transition-colors duration-300 py-2'
+						</button>
+						<button
+							onClick={() => handleNavClick('contact')}
+							className='text-black hover:text-underline font-medium transition-colors duration-300 py-2 text-left cursor-pointer'
 						>
 							Contact
-						</a>
+						</button>
 
 						{/* Mobile Auth Buttons */}
 						<div className='flex flex-col gap-1 pt-4 border-t border-white/20'>
