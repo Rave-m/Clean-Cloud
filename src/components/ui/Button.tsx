@@ -13,7 +13,7 @@ const Button = ({
 		<button
 			type={type}
 			onClick={onClick}
-			className={`px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors ${className}`}
+			className={`py-1 px-10 bg-[#5E4B8B] rounded-sm text-sm font-semibold text-white ${className}`}
 		>
 			{children}
 		</button>

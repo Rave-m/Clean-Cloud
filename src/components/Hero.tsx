@@ -2,7 +2,7 @@ const Hero = () => {
 	return (
 		<section className='w-full px-4 sm:px-6 lg:px-8'>
 			<div className='container mx-auto'>
-				<div className='flex flex-col lg:flex-row w-full justify-center items-center gap-8 lg:gap-12 rounded-t-2xl lg:rounded-t-3xl bg-gradient-to-br from-[#5E4B8B] via-[#9163F3] to-[#A78BFA] py-12 lg:py-16 px-6 lg:px-12 text-white overflow-hidden relative'>
+				<div className='flex flex-col lg:flex-row w-full justify-center items-center gap-8 lg:gap-12 rounded-t-2xl lg:rounded-t-3xl bg-gradient-to-br from-[#5E4B8B] via-[#9163F3] to-[#A78BFA] py-12 lg:py-16 px-6 lg:px-12 text-white overflow-hidden relative lg:h-[80vh]'>
 					{/* Content Section */}
 					<div className='flex flex-col gap-6 lg:gap-8 flex-1 text-center lg:text-left z-10'>
 						<h1 className='text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight'>
@@ -14,17 +14,17 @@ const Hero = () => {
 							</span>
 						</h1>
 
-						<p className='text-base sm:text-lg lg:text-xl opacity-90 max-w-2xl leading-relaxed'>
+						<p className='opacity-90 max-w-2xl leading-relaxed'>
 							Laundry Langganan berdiri di Yogyakarta pada Agustus 2022. Dengan tagline{' '}
 							<span className='font-semibold text-yellow-200'>"Bersih, Wangi, dan Terpercaya"</span>{' '}
 							kami siap melayani kebutuhan laundry Anda dengan pelayanan terbaik.
 						</p>
 
 						<div className='flex flex-col sm:flex-row gap-4 items-center lg:items-start'>
-							<button className='cursor-pointer bg-white text-purple-700 font-semibold px-8 py-4 rounded-full hover:bg-gray-100 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl'>
+							<button className='cursor-pointer bg-white text-purple-700 font-semibold px-8 py-2 rounded-full hover:bg-gray-100 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl'>
 								Get Started Now
 							</button>
-							<button className='cursor-pointer border-2 border-white/50 text-white font-semibold px-8 py-4 rounded-full hover:bg-white/10 hover:border-white transition-all duration-300'>
+							<button className='cursor-pointer border-2 border-white/50 text-white font-semibold px-8 py-2 rounded-full hover:bg-white/10 hover:border-white transition-all duration-300'>
 								Learn More
 							</button>
 						</div>
